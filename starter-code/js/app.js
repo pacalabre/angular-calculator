@@ -16,6 +16,8 @@ var b = '';
       console.log("a = "+ a);
       console.log("b = "+ b);
     } else if (toggle === 1) {
+      $scope.number = '';
+      $scope.number = $scope.number +'1';
       b= $scope.number;
       console.log("a = "+ a);
       console.log("b = "+ b);
@@ -63,7 +65,7 @@ var b = '';
 
   $scope.add = function(a,b) {
     operator = 1;
-    toggle = 2;
+    toggle += 1;
     console.log(toggle);
   };
 
