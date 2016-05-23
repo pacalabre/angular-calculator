@@ -16,9 +16,8 @@ var b = '';
       console.log("a = "+ a);
       console.log("b = "+ b);
     } else if (toggle === 1) {
-      $scope.number = '';
-      $scope.number = $scope.number +'1';
-      b= $scope.number;
+      $scope.number = '0';
+      b = $scope.number + '1';
       console.log("a = "+ a);
       console.log("b = "+ b);
     }
@@ -69,9 +68,35 @@ var b = '';
     console.log(toggle);
   };
 
+  $scope.subtract = function(a,b) {
+    operator = 2;
+    toggle += 1;
+    console.log(toggle);
+  };
+
+  $scope.multiply = function(a,b) {
+    operator = 1;
+    toggle += 1;
+    console.log(toggle);
+  };
+
+  $scope.divide = function(a,b) {
+    operator = 4;
+    toggle += 1;
+    console.log(toggle);
+  };
+
+
+
   $scope.equals = function() {
-    if (operator = 1) {
-      a + b;
+    if (operator === 1) {
+      $scope.number = parseInt(a) + parseInt(b);
+    } else if (operator === 2) {
+      $scope.number = parseInt(a) - parseInt(b);
+    } else if (operator === 3) {
+      $scope.number = parseInt(a) * parseInt(b);
+    } else if (operator === 4) {
+      $scope.number = parseInt(a) / parseInt(b);
     }
   }
 
