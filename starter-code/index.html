@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='calcApp'>
     <head>
         <title>Simple Calc&trade;</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -12,38 +12,38 @@
         <div class="container">
             <h2 class="text-center">Simple Calc&trade;</h2>
             <div class="row">
-                <div class="col-sm-4 col-sm-offset-4 my-calc">
+                <div class="col-sm-4 col-sm-offset-4 my-calc" ng-controller="calcCtrl">
 
-                  <div class="row">
-                    <input type="text" class="form-control display center-block text-right" readonly>
+                  <div class="row" >
+                    <input type="text" class="form-control display center-block text-right" ng-model="number"  readonly>
                   </div>
                   <div class="row text-center">
-                    <button class="btn btn-default">7</button>
-                    <button class="btn btn-default">8</button>
-                    <button class="btn btn-default">9</button>
-                    <button class="btn btn-primary">&divide;</button>
-                    <button class="btn btn-primary">&times;</button>
+                    <button ng-click="numSeven()" class="btn btn-default">7</button>
+                    <button ng-click="numEight()" class="btn btn-default">8</button>
+                    <button ng-click="numNine()" class="btn btn-default">9</button>
+                    <button ng-click="divide()" class="btn btn-primary">&divide;</button>
+                    <button ng-click="multiply()" class="btn btn-primary">&times;</button>
                   </div>
                   <div class="row text-center">
-                    <button class="btn btn-default">4</button>
-                    <button class="btn btn-default">5</button>
-                    <button class="btn btn-default">6</button>
-                    <button class="btn btn-primary">&plus;</button>
-                    <button class="btn btn-primary">&minus;</button>
+                    <button ng-click="numFour()" class="btn btn-default">4</button>
+                    <button ng-click="numFive()" class="btn btn-default">5</button>
+                    <button ng-click="numSix()" class="btn btn-default">6</button>
+                    <button ng-click="add()" class="btn btn-primary">&plus;</button>
+                    <button ng-click="subtract()" class="btn btn-primary">&minus;</button>
                   </div>
                   <div class="row text-center">
-                    <button class="btn btn-default">1</button>
-                    <button class="btn btn-default">2</button>
-                    <button class="btn btn-default">3</button>
-                    <button class="btn btn-success">&equals;</button>
-                    <button class="btn btn-danger">c</button>
+                    <button ng-click="numOne()" class="btn btn-default">1</button>
+                    <button ng-click="numTwo()" class="btn btn-default">2</button>
+                    <button ng-click="numThree()" class="btn btn-default">3</button>
+                    <button ng-click="equals()" class="btn btn-success">&equals;</button>
+                    <button ng-click="clear()" class="btn btn-danger">c</button>
                   </div>
                   <div class="row text-center">
-                    <button class="btn btn-default"></button>
-                    <button class="btn btn-default">0</button>
-                    <button class="btn btn-default"></button>
-                    <button class="btn btn-default"></button>
-                    <button class="btn btn-default"></button>
+                    <button ng-click="num()" class="btn btn-default"></button>
+                    <button ng-click="numZero()" class="btn btn-default">0</button>
+                    <button ng-click="numSeven()" class="btn btn-default"></button>
+                    <button ng-click="num()" class="btn btn-default"></button>
+                    <button ng-click="num()" class="btn btn-default"></button>
                 </div>
             </div>
         </div>
